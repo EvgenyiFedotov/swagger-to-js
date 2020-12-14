@@ -4,11 +4,11 @@ function pathDefaultParams(variants) {
     const header = {};
 
     if (consume) {
-      header.accept = `"${consume}"`;
+      header["Content-Type"] = `"${produce}"`;
     }
 
     if (produce) {
-      header["Content-Type"] = `"${produce}"`;
+      header.accept = `"${consume}"`;
     }
 
     if (Object.keys(header).length) {
